@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="card">
         <div class="image">
-            <img :src="cardData.card_images.image_url" :alt="cardData.name">
+            <img :src="cardData.card_images[0].image_url" :alt="cardData.name">
         </div>
 
         <div class="name">
@@ -31,16 +31,10 @@ export default {
     flex-basis: calc(100% / 5 - 20px);
     text-align: center;
 
-    .image {
-        width: 100%;
-        // height: 200px;
-        background-color: aquamarine;
-
-        img {
-            max-width: 100%;
-        }
-    }
-
+    .image img {
+        max-width: 100%;
+    } 
+        
     .name {
         color: $secondary;
         padding: 20px 0;
