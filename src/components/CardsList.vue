@@ -1,7 +1,11 @@
 <script>
+import Card from './Card.vue';
 
 export default {
     name: 'CardsList',
+    components: {
+        Card,
+    },
 }
 
 </script>
@@ -10,6 +14,11 @@ export default {
     <section class="container">
         <div class="found-cards">
             <span>Found 39 cards</span>
+        </div>
+
+
+        <div class="cards-container">
+            <Card />
         </div>
     </section>
 
@@ -28,6 +37,13 @@ export default {
         font-weight: bold;
         padding: 25px 15px;
 
+    }
+
+    .cards-container {
+
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
     }
 }
 </style>
