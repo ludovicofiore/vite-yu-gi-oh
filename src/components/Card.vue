@@ -2,6 +2,7 @@
 
 export default {
     name: 'Card',
+    props: ['cardData'],
 }
 
 </script>
@@ -9,15 +10,15 @@ export default {
 <template>
     <div class="card">
         <div class="image">
-
+            <img :src="cardData.card_images.image_url" :alt="cardData.name">
         </div>
 
         <div class="name">
-            <h3>NOME CARTA</h3>
+            <h3>{{ cardData.name }}</h3>
         </div>
 
         <div class="archetype">
-            <span>archetipo</span>
+            <span>{{ cardData.archetype }}</span>
         </div>
     </div>
 </template>
@@ -32,8 +33,12 @@ export default {
 
     .image {
         width: 100%;
-        height: 200px;
+        // height: 200px;
         background-color: aquamarine;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     .name {
