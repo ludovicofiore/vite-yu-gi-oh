@@ -29,7 +29,15 @@ export default {
   // metodo per gestione api
   methods: {
     getCards() {
-      axios.get(store.apiURL).then(res => {
+      // variabile per cambio api
+      let endPoint = store.apiURL;
+
+      // condizione per ricerca
+      if(store.selectCards !== '') {
+        endPoint += `&${store.apiParam}=${store.selectCards}`
+      }
+
+      axios.get(endPoint).then(res => {
         console.log(res.data.data);
         // riempio array con dati dell'api
         store.cardsArray = res.data.data;

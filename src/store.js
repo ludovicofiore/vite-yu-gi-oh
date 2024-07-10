@@ -7,5 +7,8 @@ export const store = reactive({
 
     // proprietà per select
     selectCards: "",
+
+    // parametro per criterio ricerca
+    apiParam: "archetype",
 });
 
