@@ -11,10 +11,10 @@
             }
         },
         methods: {
-            switchSelect(event) {
-                store.selectCards = event.target.value;
-                console.log(store.selectCards);
-            }
+            // switchSelect(event) {
+            //     store.selectCards = event.target.value;
+            //     console.log(store.selectCards);
+            // }
          },
     }
     
@@ -22,7 +22,7 @@
 
 <template>
 <div class="container">
-    <select name="archetype" id="archetype" @change="switchSelect($event)">
+    <select name="archetype" id="archetype" @change="$emit('switchSelect')" v-model="store.selectCards">
 
         <option value="Alien">Alien</option>
         <option value="Melodious">Melodious</option>

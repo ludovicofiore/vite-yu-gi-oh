@@ -49,7 +49,7 @@ export default {
   <AppHeader />
 
   <main>
-    <AppSelect />
+    <AppSelect @switchSelect="getCards" />
     <CardsList />
   </main>
 
