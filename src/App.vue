@@ -6,6 +6,7 @@ import axios from "axios";
 
 import AppHeader from './components/AppHeader.vue';
 import CardsList from "./components/CardsList.vue";
+import AppSelect from "./components/AppSelect.vue";
 
 // import store
 import { store } from './store';
@@ -15,6 +16,7 @@ export default {
   components: {
     AppHeader,
     CardsList,
+    AppSelect
   },
 
 
@@ -47,6 +49,7 @@ export default {
   <AppHeader />
 
   <main>
+    <AppSelect />
     <CardsList />
   </main>
 
