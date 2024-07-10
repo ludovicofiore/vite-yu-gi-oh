@@ -10,12 +10,6 @@
                 store,
             }
         },
-        methods: {
-            // switchSelect(event) {
-            //     store.selectCards = event.target.value;
-            //     console.log(store.selectCards);
-            // }
-         },
     }
     
 </script>
@@ -24,8 +18,7 @@
 <div class="container">
     <select name="archetype" id="archetype" @change="$emit('switchSelect')" v-model="store.selectCards">
 
-        <option value="Alien">Alien</option>
-        <option value="Melodious">Melodious</option>
+        <option v-for="(option, index) in store.optionsArray" :key="index" :value="option.archetype_name">{{ option.archetype_name }}</option>
     </select>
 </div>
 </template>

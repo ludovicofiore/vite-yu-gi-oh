@@ -10,5 +10,9 @@ export const store = reactive({
 
     // parametro per criterio ricerca
     apiParam: "archetype",
+
+    // api e array per opzioni select
+    optionsApi: "https://db.ygoprodeck.com/api/v7/archetypes.php",
+    optionsArray: [],
 });
 

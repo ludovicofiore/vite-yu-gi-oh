@@ -38,10 +38,22 @@ export default {
       }
 
       axios.get(endPoint).then(res => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         // riempio array con dati dell'api
         store.cardsArray = res.data.data;
-        console.log(store.cardsArray);
+        // console.log(store.cardsArray);
+
+      })
+    },
+
+    // metodo per options
+    getOptions() {
+
+      axios.get(store.optionsApi).then(result => {
+        console.log(result.data);
+        // riempio array con dati dell'api
+        store.optionsArray = result.data;
+        console.log(store.optionsArray);
 
       })
     }
@@ -49,6 +61,7 @@ export default {
   // life cicle hook
   created() {
     this.getCards();
+    this.getOptions();
   }
 }
 </script>
